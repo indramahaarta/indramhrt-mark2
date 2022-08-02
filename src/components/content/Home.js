@@ -16,20 +16,15 @@ const Home = () => {
           <div className={classes["home-left__moto"]}>
             I like to explore new things about software development
           </div>
-          <div className={classes["home-left__button"]}></div>
+          <div className={classes["home-left__button"]}>
+            <button className={classes.btn}>Download CV</button>
+          </div>
         </div>
       </div>
-      {/* <div className={classes["home-right"]}>
-        <div className={classes["home-right__foto"]}>
-          <img src={Indra} alt="Indra Mahaarta"></img>
-        </div>
-      </div> */}
       <div className={classes["home-right"]}>
-        {/* <div className={classes["home-right__foto"]}> */}
-          <div className={classes.layer1}></div>
-          <div className={classes.layer2}></div>
-          <img className={classes.foto} src={Indra} alt="Indra Mahaarta"></img>
-        {/* </div> */}
+        <div className={classes.layer1}></div>
+        <div className={classes.layer2}></div>
+        <img className={classes.foto} src={Indra} alt="Indra Mahaarta"></img>
       </div>
     </div>
   );
