@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import { useInView } from "react-intersection-observer";
 import classes from "./Home.module.css";
 import Indra from "../../static/indra-removebg-preview.png";
+import Download from "../../static/download.png";
 
 const Home = () => {
+  const [isHoverBtn, setIsHoverBtn] = useState(false);
+  const { ref: leftRef, inView: leftInView } = useInView();
+  const { ref: rightRef, inView: rightInView } = useInView();
+
+  const hoverOnHandler = () => {
+    setIsHoverBtn(true);
+  };
+
+  const hoverOffHander = () => {
+    setIsHoverBtn(false);
+  };
+
   return (
     <div className={classes.home}>
-      <div className={classes["home-left"]}>
+      <div
+        ref={leftRef}
+        className={`{$classes["home-left"]} ${
+          leftInView ? classes.animateleft : ""
+        }`}
+      >
         <div className={classes.wrapper}>
           <div className={classes["home-left__title"]}>
             Hi, i'am <span>Indra Mahaarta</span>
@@ -17,14 +36,29 @@ const Home = () => {
             I like to explore new things about software development
           </div>
           <div className={classes["home-left__button"]}>
-            <button className={classes.btn}>Download CV</button>
+            <button
+              className={classes.btn}
+              onMouseOver={hoverOnHandler}
+              onMouseOut={hoverOffHander}
+            >
+              {!isHoverBtn && "Download CV"}
+              {isHoverBtn && <img alt="download" src={Download}></img>}
+            </button>
           </div>
         </div>
       </div>
-      <div className={classes["home-right"]}>
-        <div className={classes.layer1}></div>
-        <div className={classes.layer2}></div>
-        <img className={classes.foto} src={Indra} alt="Indra Mahaarta"></img>
+      <div className={classes["home-right"]} ref={rightRef}>
+        <div
+          className={`${classes.layer1} ${rightInView ? classes.bump : ""}`}
+        ></div>
+        <div
+          className={`${classes.layer2} ${rightInView ? classes.bump : ""}`}
+        ></div>
+        <img
+          className={`${classes.foto} ${rightInView ? classes.blowup : ""}`}
+          src={Indra}
+          alt="Indra Mahaarta"
+        ></img>
       </div>
     </div>
   );

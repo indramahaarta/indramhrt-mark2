@@ -15,7 +15,10 @@
   max-width: 500px;
   padding-left: 40px;
   color: black;
-  animation: animateright 2000ms ease-in-out;
+}
+
+.animateleft {
+  animation: animateleft 2000ms ease-in-out;
 }
 
 .home-left__title {
@@ -50,15 +53,17 @@
   padding: 10px 15px;
   font-size: 1.2em;
   font-weight: 700;
-  background-color: #73A9AD;
+  background-color: #73a9ad;
   color: white;
   border-radius: 0.6em;
   border: none;
+  width: 10rem;
+  height: 3rem;
 }
 
 .btn:hover {
   background-color: #b7e5dd;
-  box-shadow: 0px 0px 5px 5px rgba(115, 169, 173, 0.1);
+  box-shadow: 0px 0px 15px 15px rgba(115, 169, 173, 0.2);
   cursor: pointer;
 }
 
@@ -74,6 +79,9 @@
   border-bottom: 10px solid #791ece;
   z-index: 0;
   position: relative;
+}
+
+.blowup {
   animation: blowup 2000ms ease-in-out;
 }
 
@@ -86,7 +94,6 @@
   z-index: -1;
   top: 15em;
   left: 15em;
-  animation: bump 2000ms ease-in-out;
 }
 
 .layer2 {
@@ -98,16 +105,19 @@
   height: 375px;
   background-color: #b7e5dd;
   border-radius: 100%;
+}
+
+.bump {
   animation: bump 2000ms ease-in-out;
 }
 
-@keyframes animateright {
+@keyframes animateleft {
   from {
     transform: translateX(-50px);
     opacity: 0;
   }
   to {
-    transform: translateY(0px);
+    transform: translateX(0px);
     opacity: 1;
   }
 }
