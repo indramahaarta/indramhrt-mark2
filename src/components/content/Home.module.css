@@ -1,0 +1,148 @@
+.home {
+  height: 115vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home-left {
+  margin: 10px;
+  max-width: 500px;
+  padding-left: 40px;
+  color: black;
+  animation: animateright 2000ms ease-in-out;
+}
+
+.home-left__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.home-left__title span {
+  color: #791ece;
+}
+
+.home-left__title span:hover {
+  color: #7801e8;
+  cursor: pointer;
+}
+
+.home-left__sub-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.home-left__sub-title span {
+    background: url('../../static/line-biru.png') no-repeat bottom;
+}
+
+.home-left__moto {
+  font-size: 1rem;
+}
+
+.home-right {
+  width: 40%;
+  padding-right: 40px;
+  /* display: flex;
+  flex-direction: row; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  position: relative;
+}
+
+.home-right__foto {
+  margin: 10px;
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  background-color: #791ece;
+  position: relative;
+  box-shadow: 0px 0px 46px 0px rgb(121, 30, 206, 0.3);
+  -webkit-box-shadow: 0px 0px 46px 0px rgb(121, 30, 206, 0.3);
+  -moz-box-shadow: 0px 0px 46px 0px rgb(121, 30, 206, 0.3);
+}
+
+img {
+  width: 550px;
+  height: 550px;
+  /* position: absolute;
+  top: -15em; */
+  animation: blowup 2000ms ease-in-out;
+  border-bottom: 10px solid #791ece;
+  z-index: 0;
+  /* border-radius: 100%; */
+  position: relative;
+  /* box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.2); */
+}
+
+.layer1 {
+    width: 320px;
+    height: 320px;
+    background-color: #A267AC;
+    border-radius: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 15em;
+    left: 15em;
+    animation: bump 2000ms ease-in-out;
+}
+
+.layer2 {
+    z-index: -2;
+    position: absolute;
+    bottom: 7em;
+    left: -3.5rem;
+    width: 375px;
+    height: 375px;
+    background-color: #B7E5DD;
+    border-radius: 100%;
+    animation: bump 2000ms ease-in-out;
+}
+
+@keyframes animateright {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+        
+    } 
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes blowup {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+        transform: scale(1.1);
+    }
+    50% {
+        opacity: 0.75;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bump {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    50% {
+        opacity: 0.25;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+    }
+}

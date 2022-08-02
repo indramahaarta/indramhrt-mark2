@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { HashLoader } from "react-spinners";
+import Navbar from "./components/navbar/Navbar.js";
+import Home from "./components/content/Home.js";
+
+import "./App.css";
+import About from "./components/content/About.js";
 
 function App() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      {loading && (
+        <div className="spinner">
+          <HashLoader
+            color={"#791ece"}
+            className="loading-spinner"
+            loading={loading}
+            size={80}
+          />
+          <p>Loading app...</p>
+        </div>
+      )}
+      {!loading && (
+        <React.Fragment>
+          <Navbar />
+          <Home />
+          <About />
+        </React.Fragment>
+      )}
+    </React.Fragment>
   );
 }
 
