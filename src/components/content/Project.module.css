@@ -19,6 +19,7 @@
   font-size: 2em;
   font-weight: 700;
   text-align: center;
+  opacity: 0;
   background: url("../../static/line-biru.png") no-repeat bottom;
 }
 
@@ -32,4 +33,25 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+}
+
+.slideup {
+  animation: titleanimation 2000ms forwards ease-in-out;
+}
+
+@keyframes titleanimation {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateY(-10px);
+    scale: 1.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

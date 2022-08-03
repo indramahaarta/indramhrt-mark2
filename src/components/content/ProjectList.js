@@ -33,7 +33,7 @@ const ProjectList = () => {
       summary:
         "Responsible for integrating API from Brick to fetch transaction list data & user balance and building dream saver feature",
       stack: [Html, Css, Javascript, Java, Springboot, Postgresql],
-      url: "https://github.com/indramahaarta/nagos-tamel-app"
+      url: "https://github.com/indramahaarta/nagos-tamel-app",
     },
     {
       id: "3",
@@ -42,7 +42,7 @@ const ProjectList = () => {
       summary:
         "Working on COVID-19 self-detection feature to screen user healthy risk and authentication & authorization system",
       stack: [Html, Css, Javascript, Python, Django],
-      url: "https://github.com/indramahaarta/temenin-isoman"
+      url: "https://github.com/indramahaarta/temenin-isoman",
     },
   ];
 
@@ -71,7 +71,13 @@ const ProjectList = () => {
                   onMouseOver={mouseOverHandler}
                   onMouseOut={mouseOffHanlder}
                 ></img>
-                <a href={item.url} rel="noreferrer" target="_blank">
+
+                <a
+                  className={`${isHover === item.id ? "" : classes.btnoff}`}
+                  href={item.url}
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <button
                     id={item.id}
                     onMouseOver={mouseOverHandler}

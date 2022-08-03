@@ -16,11 +16,12 @@
   font-size: 2em;
   font-weight: 700;
   text-align: center;
+  opacity: 0;
   background: url("../../static/line-biru.png") no-repeat bottom;
 }
 
 .slideup {
-  animation: titleanimation 2000ms ease-in-out;
+  animation: titleanimation forwards 2000ms ease-in-out;
 }
 
 .slideup2 {
