@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useInView } from "react-intersection-observer";
 import classes from "./ProjectList.module.css";
 import Indramhrt from "../../static/indramhrt.png";
 import PiggyTracker from "../../static/piggytracker.png";
@@ -15,6 +16,9 @@ import Postgresql from "../../static/postgresql.png";
 
 const ProjectList = () => {
   const [isHover, setIsHover] = useState(false);
+  const { ref: ref1, inView: inView1 } = useInView();
+  const { ref: ref2, inView: inView2 } = useInView();
+  const { ref: ref3, inView: inView3 } = useInView();
 
   const projects = [
     {
@@ -25,6 +29,8 @@ const ProjectList = () => {
         "My newest project for displaying all of my project portfolios. I work for both backend and frontend",
       stack: [Html, Css, Javascript, Reactjs],
       url: "https://github.com/indramahaarta/indramhrt",
+      ref: ref1,
+      inView: inView1,
     },
     {
       id: "2",
@@ -34,6 +40,8 @@ const ProjectList = () => {
         "Responsible for integrating API from Brick to fetch transaction list data & user balance and building dream saver feature",
       stack: [Html, Css, Javascript, Java, Springboot, Postgresql],
       url: "https://github.com/indramahaarta/nagos-tamel-app",
+      ref: ref2,
+      inView: inView2,
     },
     {
       id: "3",
@@ -43,6 +51,8 @@ const ProjectList = () => {
         "Working on COVID-19 self-detection feature to screen user healthy risk and authentication & authorization system",
       stack: [Html, Css, Javascript, Python, Django],
       url: "https://github.com/indramahaarta/temenin-isoman",
+      ref: ref3,
+      inView: inView3,
     },
   ];
 
@@ -59,8 +69,12 @@ const ProjectList = () => {
       <ul>
         {projects.map((item) => {
           return (
-            <li key={item.id} className={classes.container}>
-              <div className={classes.left}>
+            <li ref={item.ref} key={item.id} className={`${classes.container}`}>
+              <div
+                className={`${classes.left} ${
+                  item.inView ? classes.slideup : ""
+                }`}
+              >
                 <img
                   className={`${classes.foto} ${
                     isHover === item.id ? classes.hovering : ""
@@ -87,7 +101,11 @@ const ProjectList = () => {
                   </button>
                 </a>
               </div>
-              <div className={classes.right}>
+              <div
+                className={`${classes.right} ${
+                  item.inView ? classes.bump : ""
+                }`}
+              >
                 <div className={classes.projecttitle}>
                   {item.title}
                   <div className={classes.summary}>{item.summary}</div>

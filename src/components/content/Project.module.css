@@ -37,7 +37,7 @@
 }
 
 .slideup {
-  animation: titleanimation 2000ms forwards ease-in-out;
+  animation: titleanimation 1400ms forwards linear;
 }
 
 @keyframes titleanimation {

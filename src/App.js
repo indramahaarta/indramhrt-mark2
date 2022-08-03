@@ -7,17 +7,37 @@ import "./App.css";
 import About from "./components/content/About.js";
 import Project from "./components/content/Project.js";
 import Footer from "./components/footer/Footer.js";
+import Modal from "./components/ui/Modal.js";
 
 function App() {
   const [loading, setLoading] = useState(false);
+  const [isModalOn, setIsModalOn] = useState();
 
   useEffect(() => {
     setLoading(true);
 
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 7000);
   }, []);
+
+  const downloadHandler = () => {
+    setModal("CV has been downloaded! :D >_<")
+  }
+
+  const blogHandler = () => {
+    setModal("Blog is under construction :(")
+  }
+
+  const setModal = (message) => {
+    setIsModalOn(message);
+    console.log("download")
+
+    setTimeout(() => {
+      console.log(isModalOn);
+      setIsModalOn(false)
+    }, 6000)
+  }
 
   return (
     <React.Fragment>
@@ -34,11 +54,12 @@ function App() {
       )}
       {!loading && (
         <React.Fragment>
-          <Navbar />
-          <Home />
+          <Navbar onClickBlog={blogHandler}/>
+          <Home onDownload={downloadHandler}/>
           <About />
           <Project />
           <Footer />
+          {isModalOn && <Modal message={isModalOn}/>}
         </React.Fragment>
       )}
     </React.Fragment>

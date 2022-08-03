@@ -1,0 +1,31 @@
+.modal {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 15px;
+  margin: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  background-color: #b93160;
+  text-align: center;
+  border-radius: 0.6em;
+  z-index: 1000;
+  box-shadow: 0px 0px 5px 5px rgba(185, 49, 96, 0.3);
+  animation: modalanimation 5.5s forwards ease-in-out;
+}
+
+@keyframes modalanimation {
+  0% {
+    transform: translateX(500px);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(500px);
+  }
+}

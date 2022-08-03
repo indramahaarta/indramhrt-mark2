@@ -15,10 +15,11 @@
   max-width: 500px;
   padding-left: 40px;
   color: black;
+  opacity: 0;
 }
 
 .animateleft {
-  animation: animateleft 2000ms ease-in-out;
+  animation: animateleft 2000ms ease-in-out forwards;
 }
 
 .home-left__title {
@@ -81,10 +82,11 @@
   border-bottom: 10px solid #791ece;
   z-index: 0;
   position: relative;
+  opacity: 0;
 }
 
 .blowup {
-  animation: blowup 2000ms ease-in-out;
+  animation: blowup 2000ms ease-in-out forwards;
 }
 
 .layer1 {
@@ -96,6 +98,7 @@
   z-index: -1;
   top: 15em;
   left: 15em;
+  opacity: 0;
 }
 
 .layer2 {
@@ -107,10 +110,11 @@
   height: 375px;
   background-color: #b7e5dd;
   border-radius: 100%;
+  opacity: 0;
 }
 
 .bump {
-  animation: bump 2000ms ease-in-out;
+  animation: bump 2000ms ease-in-out forwards;
 }
 
 @keyframes animateleft {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [isScroll, setIsScroll] = useState(false);
 
   function scrollingHandler() {
@@ -43,7 +43,9 @@ const Navbar = () => {
             <a href="#project">Project</a>
           </li>
           <li>
-            <a href="https://indramahaarta.herokuapp.com/">Blog</a>
+            <a href="#" onClick={props.onClickBlog}>
+              Blog
+            </a>
           </li>
         </ul>
       </div>

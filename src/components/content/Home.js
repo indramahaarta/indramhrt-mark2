@@ -5,7 +5,7 @@ import Indra from "../../static/indra-removebg-preview.png";
 import Download from "../../static/download.png";
 import IndraResume from "../../static/indraresume.pdf"
 
-const Home = () => {
+const Home = (props) => {
   const [isHoverBtn, setIsHoverBtn] = useState(false);
   const { ref: leftRef, inView: leftInView } = useInView();
   const { ref: rightRef, inView: rightInView } = useInView();
@@ -42,6 +42,7 @@ const Home = () => {
                 className={classes.btn}
                 onMouseOver={hoverOnHandler}
                 onMouseOut={hoverOffHander}
+                onClick={props.onDownload}
               >
                 {!isHoverBtn && "Download CV"}
                 {isHoverBtn && <img alt="download" src={Download}></img>}
