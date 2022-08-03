@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import classes from "./Home.module.css";
 import Indra from "../../static/indra-removebg-preview.png";
 import Download from "../../static/download.png";
+import IndraResume from "../../static/indraresume.pdf"
 
 const Home = () => {
   const [isHoverBtn, setIsHoverBtn] = useState(false);
@@ -18,7 +19,7 @@ const Home = () => {
   };
 
   return (
-    <div className={classes.home}>
+    <div id="home" className={classes.home}>
       <div
         ref={leftRef}
         className={`{$classes["home-left"]} ${
@@ -36,14 +37,16 @@ const Home = () => {
             I like to explore new things about software development
           </div>
           <div className={classes["home-left__button"]}>
-            <button
-              className={classes.btn}
-              onMouseOver={hoverOnHandler}
-              onMouseOut={hoverOffHander}
-            >
-              {!isHoverBtn && "Download CV"}
-              {isHoverBtn && <img alt="download" src={Download}></img>}
-            </button>
+            <a href={IndraResume} download> 
+              <button
+                className={classes.btn}
+                onMouseOver={hoverOnHandler}
+                onMouseOut={hoverOffHander}
+              >
+                {!isHoverBtn && "Download CV"}
+                {isHoverBtn && <img alt="download" src={Download}></img>}
+              </button>
+            </a>
           </div>
         </div>
       </div>

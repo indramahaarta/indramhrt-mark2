@@ -18,11 +18,15 @@ const Navbar = () => {
     <nav
       className={`${classes.navbar} ${isScroll ? classes["scroll-nav"] : ""}`}
     >
-      <div
-        className={`${classes.logo} ${isScroll ? classes["scroll-logo"] : ""}`}
-      >
-        Indra<span>mhrt</span>
-      </div>
+      <a className={classes.a} href="#home">
+        <div
+          className={`${classes.logo} ${
+            isScroll ? classes["scroll-logo"] : ""
+          }`}
+        >
+          Indra<span>mhrt</span>
+        </div>
+      </a>
       <div
         className={
           !isScroll ? classes.menu : classes.menu + " " + classes["scroll-menu"]
@@ -30,16 +34,16 @@ const Navbar = () => {
       >
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#">About Me</a>
+            <a href="#about">About Me</a>
           </li>
           <li>
-            <a href="#">Project</a>
+            <a href="#project">Project</a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href="https://indramahaarta.herokuapp.com/">Blog</a>
           </li>
         </ul>
       </div>

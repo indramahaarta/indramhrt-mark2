@@ -1,7 +1,7 @@
 .home {
   height: 115vh;
   width: 100%;
-  max-height: 860px;
+  max-height: 720px;
   max-width: 1280px;
   display: flex;
   flex-direction: row;
@@ -59,12 +59,14 @@
   border: none;
   width: 10rem;
   height: 3rem;
+  transition: all 500ms ease-in-out;
 }
 
 .btn:hover {
   background-color: #b7e5dd;
   box-shadow: 0px 0px 15px 15px rgba(115, 169, 173, 0.2);
   cursor: pointer;
+  transition: all 500ms ease-in-out;
 }
 
 .home-right {

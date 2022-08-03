@@ -15,7 +15,7 @@ const About = () => {
   const { ref: lightRef, inView: lightInView } = useInView();
 
   return (
-    <div className={classes.about}>
+    <div id="about" className={classes.about}>
       <div
         ref={titleRef}
         className={`${classes.title} ${titleInView ? classes.slideup : ""}`}
@@ -27,7 +27,7 @@ const About = () => {
           ref={leftRef}
           className={`${classes.left} ${leftInView ? classes.bump : ""}`}
         >
-          <div className={classes.one}><span>3</span>rd</div>
+          <div className={`${classes.one} ${classes['span-animation']}`}>3rd</div>
           <div className={classes.two}>Year Student</div>
           <div className={classes.three}>in Computer Science</div>
         </div>

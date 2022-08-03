@@ -5,6 +5,7 @@ import Home from "./components/content/Home.js";
 
 import "./App.css";
 import About from "./components/content/About.js";
+import Project from "./components/content/Project.js";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -35,6 +36,7 @@ function App() {
           <Navbar />
           <Home />
           <About />
+          <Project />
         </React.Fragment>
       )}
     </React.Fragment>
