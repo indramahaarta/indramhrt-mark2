@@ -3,14 +3,21 @@ import classes from "./Navbar.module.css";
 
 const Navbar = (props) => {
   const [isScroll, setIsScroll] = useState(false);
+  const [isNavbarActive, setIsNavbarActive] = useState(false);
 
   function scrollingHandler() {
-    if (window.scrollY >= 30) {
+    if (window.scrollY >= 10) {
       setIsScroll(true);
     } else {
       setIsScroll(false);
     }
   }
+
+  const navbarClickHandler = () => {
+    setIsNavbarActive((active) => {
+      return !active;
+    });
+  };
 
   window.addEventListener("scroll", scrollingHandler);
 
@@ -27,6 +34,14 @@ const Navbar = (props) => {
           Indra<span>mhrt</span>
         </div>
       </a>
+
+      <div
+        onClick={navbarClickHandler}
+        className={`${classes["hamburger-menu"]} ${isNavbarActive ? classes.open : ""}`}
+      >
+        <div className={classes.line}></div>
+      </div>
+
       <div
         className={
           !isScroll ? classes.menu : classes.menu + " " + classes["scroll-menu"]

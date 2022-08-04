@@ -1,8 +1,6 @@
 .container {
   height: 90%;
   width: 100%;
-  margin: 10px;
-  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,6 +10,7 @@
 }
 
 .left {
+  margin-left: 40px;
   border-radius: 0.5em;
   background-color: #791ece;
   width: 70%;
@@ -64,6 +63,7 @@
 }
 
 .right {
+  margin-right: 40px;
   width: 30%;
   height: 100%;
   margin-left: 40px;
@@ -75,6 +75,7 @@
 }
 
 .right div {
+  width: 100%;
   text-align: justify;
   text-justify: inter-word;
   margin-top: 30px;
@@ -162,5 +163,35 @@
     opacity: 1;
     transform: translateY(0px);
     transform: scale(1);
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left, .right {
+    width: 80%;
+    margin: 0;
+  }
+
+  .right {
+    margin-top: 30px;
+  }
+
+  .techstack {
+    margin-top: 0px !important;
+  }
+
+  .projecttitle {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (max-width:480px) {
+  .left, .right {
+    width: 90%;
   }
 }
