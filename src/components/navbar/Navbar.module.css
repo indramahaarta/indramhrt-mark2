@@ -98,6 +98,7 @@
 .hamburger-menu {
   height: 30px;
   width: 30px;
+  z-index: 300;
 }
 
 .navbar .hamburger-menu {
@@ -115,6 +116,7 @@
   width: 30px;
   background-color: #73a9ad;
   transition: all 0.2s ease-in-out;
+  z-index: 300;
 }
 
 .line::before,
@@ -124,6 +126,7 @@
   width: 30px;
   background-color: #73a9ad;
   position: absolute;
+  z-index: 300;
 }
 
 .line::before {

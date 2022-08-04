@@ -25,28 +25,31 @@ const Home = (props) => {
         className={`{$classes["home-left"]} ${
           leftInView ? classes.animateleft : ""
         }`}
+        id="left"
       >
-        <div className={classes["home-left__title"]}>
-          Hi, i'am <span>Indra Mahaarta</span>
-        </div>
-        <div className={classes["home-left__sub-title"]}>
-          <span>Computer Science</span> Student at University of Indonesia
-        </div>
-        <div className={classes["home-left__moto"]}>
-          I like to explore new things about software development
-        </div>
-        <div className={classes["home-left__button"]}>
-          <a href={IndraResume} download>
-            <button
-              className={classes.btn}
-              onMouseOver={hoverOnHandler}
-              onMouseOut={hoverOffHander}
-              onClick={props.onDownload}
-            >
-              {!isHoverBtn && "Download CV"}
-              {isHoverBtn && <img alt="download" src={Download}></img>}
-            </button>
-          </a>
+        <div className={classes.wrapper}>
+          <div className={classes["home-left__title"]}>
+            Hi, i'am <span>Indra Mahaarta</span>
+          </div>
+          <div className={classes["home-left__sub-title"]}>
+            <span>Computer Science</span> Student at University of Indonesia
+          </div>
+          <div className={classes["home-left__moto"]}>
+            I like to explore new things about software development
+          </div>
+          <div className={classes["home-left__button"]}>
+            <a href={IndraResume} download>
+              <button
+                className={classes.btn}
+                onMouseOver={hoverOnHandler}
+                onMouseOut={hoverOffHander}
+                onClick={props.onDownload}
+              >
+                {!isHoverBtn && "Download CV"}
+                {isHoverBtn && <img alt="download" src={Download}></img>}
+              </button>
+            </a>
+          </div>
         </div>
       </div>
       <div className={classes["home-right"]} ref={rightRef}>

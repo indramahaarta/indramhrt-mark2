@@ -194,4 +194,8 @@
   .left, .right {
     width: 90%;
   }
+
+  .summary {
+    font-size: 15px;
+  }
 }

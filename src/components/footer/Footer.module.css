@@ -1,4 +1,5 @@
 .footer {
+  margin: 0 !important;
   background-color: #373737;
 }
 
@@ -8,10 +9,31 @@
 }
 
 .content {
+  margin: 0;
   text-align: center;
   font-size: 1.2em;
   font-weight: bold;
   color: #eee;
   background-color: #373737;
   height: 50px;
+}
+
+.made {
+  opacity: 0;
+}
+
+.bump {
+  animation: bump 1600ms forwards ease-in;
+}
+
+@keyframes bump {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }  
 }

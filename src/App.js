@@ -31,10 +31,8 @@ function App() {
 
   const setModal = (message) => {
     setIsModalOn(message);
-    console.log("download")
 
     setTimeout(() => {
-      console.log(isModalOn);
       setIsModalOn(false)
     }, 6000)
   }
@@ -54,7 +52,7 @@ function App() {
       )}
       {!loading && (
         <React.Fragment>
-          <Navbar onClickBlog={blogHandler}/>
+          <Navbar onClickBlog={blogHandler} />
           <Home onDownload={downloadHandler}/>
           <About />
           <Project />
