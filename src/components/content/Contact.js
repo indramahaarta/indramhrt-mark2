@@ -25,7 +25,7 @@ const Contact = () => {
           <div classes={classes.summary}>Contact me on</div>
           <ul>
             <li className={classes.media}>
-              <a href="https://wa.me/82147474931" className={classes["media-type"]}>
+              <a href="https://api.whatsapp.com/send?phone=6282147474931" className={classes["media-type"]}>
                 <img alt="wa" src={WA}></img>
                 WA
               </a>
