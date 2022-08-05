@@ -14,19 +14,19 @@ import Java from "../../static/java.png";
 import Python from "../../static/python.png";
 import Postgresql from "../../static/postgresql.png";
 
-const ProjectList = () => {
+const ProjectList = (props) => {
   const [isHover, setIsHover] = useState(false);
   const { ref: ref1, inView: inView1 } = useInView();
   const { ref: ref2, inView: inView2 } = useInView();
   const { ref: ref3, inView: inView3 } = useInView();
 
-  const projects = [
+  const projectLists = [
     {
       id: "1",
       title: "Personal Website",
       img: Indramhrt,
       summary:
-        "My newest project for displaying all of my project portfolios. I work for both backend and frontend",
+        "My newest project for displaying all of my portfolios. I work for both backend and frontend",
       stack: [Html, Css, Javascript, Reactjs],
       url: "https://github.com/indramahaarta/indramhrt",
       ref: ref1,
@@ -62,6 +62,14 @@ const ProjectList = () => {
 
   function mouseOffHanlder() {
     setIsHover(false);
+  }
+
+  let projects = [];
+
+  if (props.isFullProjectoaded) {
+    projects = projectLists.map((item) => item);
+  } else {
+    projects = projectLists.filter((item) => item.id === "1");
   }
 
   return (

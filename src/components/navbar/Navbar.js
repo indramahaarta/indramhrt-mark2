@@ -65,7 +65,7 @@ const Navbar = (props) => {
               <a href="#project">Project</a>
             </li>
             <li>
-              <a href="#" onClick={props.onClickBlog}>
+              <a href="#blog" onClick={props.onClickBlog}>
                 Blog
               </a>
             </li>

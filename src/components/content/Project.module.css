@@ -36,10 +36,34 @@
 
 }
 
+.showProjectView {
+  opacity: 0;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #272727;
+  color: white;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease-in-out;
+}
+
+.showProjectView:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
+  color: #eee;
+  transition: all 200ms ease-in-out;
+}
+
 .slideup {
   animation: titleanimation 1400ms forwards linear;
 }
 
+.bump {
+  animation: bump 1600ms forwards ease-in;
+}
 @keyframes titleanimation {
   0% {
     opacity: 0;
@@ -54,4 +78,16 @@
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+@keyframes bump {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }  
 }
