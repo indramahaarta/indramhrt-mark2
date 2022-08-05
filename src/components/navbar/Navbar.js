@@ -24,7 +24,12 @@ const Navbar = (props) => {
 
   return (
     <React.Fragment>
-      {isNavbarActive && <OverlayNavbar onClickBlog={props.onClickBlog} onClick={navbarClickHandler} />}
+      {isNavbarActive && (
+        <OverlayNavbar
+          onClickBlog={props.onClickBlog}
+          onClick={navbarClickHandler}
+        />
+      )}
       <nav
         className={`${classes.navbar} ${isScroll ? classes["scroll-nav"] : ""}`}
       >
@@ -63,6 +68,9 @@ const Navbar = (props) => {
             </li>
             <li>
               <a href="#project">Project</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
             </li>
             <li>
               <a href="#blog" onClick={props.onClickBlog}>

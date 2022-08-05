@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <div className={classes.footer} ref={ref}>
-      <img alt="layer2" src={Layer2} className={classes.layer}></img>
+      <img alt="layer" className={classes.layer} src={Layer2}></img>
       <div className={classes.content}>
         <div className={`${classes.made} ${inView ? classes.bump : ""}`}>
           Made with Love <img src={Love} alt="Love"></img>

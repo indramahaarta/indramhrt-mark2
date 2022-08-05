@@ -8,6 +8,7 @@ import About from "./components/content/About.js";
 import Project from "./components/content/Project.js";
 import Footer from "./components/footer/Footer.js";
 import Modal from "./components/ui/Modal.js";
+import Contact from "./components/content/Contact.js";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -56,6 +57,7 @@ function App() {
           <Home onDownload={downloadHandler}/>
           <About />
           <Project />
+          <Contact />
           <Footer />
           {isModalOn && <Modal message={isModalOn}/>}
         </React.Fragment>
