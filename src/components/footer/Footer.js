@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Footer.module.css";
-import Layer2 from "../../static/layer2.png";
+// import Layer2 from "../../static/layer2.png";
 import Love from "../../static/love.png";
 import { useInView } from "react-intersection-observer";
 
@@ -9,7 +9,6 @@ const Footer = () => {
 
   return (
     <div className={classes.footer} ref={ref}>
-      <img alt="layer" className={classes.layer} src={Layer2}></img>
       <div className={classes.content}>
         <div className={`${classes.made} ${inView ? classes.bump : ""}`}>
           Made with Love <img src={Love} alt="Love"></img>
