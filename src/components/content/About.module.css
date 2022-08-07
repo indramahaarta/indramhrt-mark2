@@ -158,7 +158,6 @@
   75% {
     opacity: 0.75;
     transform: translateY(-10px);
-    scale: 1.5;
   }
   100% {
     opacity: 1;
