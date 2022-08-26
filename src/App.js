@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { HashLoader } from "react-spinners";
 import Navbar from "./components/navbar/Navbar.js";
 import Home from "./components/content/Home.js";
@@ -14,13 +14,13 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [isModalOn, setIsModalOn] = useState();
 
-  useEffect(() => {
-    setLoading(true);
+  // useEffect(() => {
+  //   setLoading(true);
 
-    setTimeout(() => {
-      setLoading(false);
-    }, 7000);
-  }, []);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 7000);
+  // }, []);
 
   const downloadHandler = () => {
     setModal("CV has been downloaded! :D >_<")
