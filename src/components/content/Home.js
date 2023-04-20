@@ -29,13 +29,7 @@ const Home = (props) => {
       >
         <div className={classes.wrapper}>
           <div className={classes["home-left__title"]}>
-            Hi, i'm <span>Indra Mahakwasa</span>
-          </div>
-          <div className={classes["home-left__title"]}>
-            Hi, i'm <span>Indra Mahakwasa</span>
-          </div>
-          <div className={classes["home-left__title"]}>
-            Hi, i'm <span>Indra Mahakwasa</span>
+            Hi, i'm <span>Indra Mahaarta</span>
           </div>
           <div className={classes["home-left__sub-title"]}>
             <span>Computer Science</span> Student at University of Indonesia
