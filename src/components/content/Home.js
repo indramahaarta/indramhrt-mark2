@@ -28,33 +28,6 @@ const Home = (props) => {
         id="left"
       >
         <div className={classes.wrapper}>
-          <div className={classes["home-left__title"]}>
-            Hi, i'm <span>Indra Mahakwasa</span>
-          </div>
-          <div className={classes["home-left__title"]}>
-            Hi, i'm <span>Indra Mahakwasa</span>
-          </div>
-          <div className={classes["home-left__title"]}>
-            Hi, i'm <span>Indra Mahakwasa</span>
-          </div>
-          <div className={classes["home-left__title"]}>
-            Hi, i'm <span>Indra Mahakwasa</span>
-          </div>
-          <div className={classes["home-left__title"]}>
-            Hi, i'm <span>Indra Mahakwasa</span>
-          </div>
-          <div className={classes["home-left__title"]}>
-            Hi, i'm <span>Indra Mahakwasa</span>
-          </div>
-          <div className={classes["home-left__title"]}>
-            Hi, i'm <span>Indra Mahakwasa</span>
-          </div>
-          <div className={classes["home-left__title"]}>
-            Hi, i'm <span>Indra Mahaarta</span>
-          </div>
-          <div className={classes["home-left__sub-title"]}>
-            <span>Computer Science</span> Student at University of Indonesia
-          </div>
           <div className={classes["home-left__moto"]}>
             I like to explore new things about software development
           </div>
